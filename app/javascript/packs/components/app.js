@@ -13,7 +13,7 @@ class App extends React.Component {
 }
 
 const mapStateToProps = (state) => ({
-  sample: state.sample
+  booth: state.booth
 });
 
 export default connect(mapStateToProps)(App);

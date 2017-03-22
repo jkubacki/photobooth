@@ -1,10 +1,16 @@
 import React from "react"
 import Webcam from "react-webcam"
+import { connect } from "react-redux"
+import Actions from "../actions/booth.js"
 
-export default class Booth extends React.Component {
-  screenshot() {
-    var screenshot = this.refs.webcam.getScreenshot();
-    console.log(screenshot);
+class Booth extends React.Component {
+  componentDidMount() {
+    console.log(this.props)
+  }
+
+  _takePicture() {
+    let picture = this.refs.webcam.getScreenshot();
+    Actions.takePicture(this.props.dispatch, picture);
   }
 
   render() {
@@ -16,8 +22,14 @@ export default class Booth extends React.Component {
           audio={false}
           screenshotFormat="image/jpeg"
         />
-        <button onClick={::this.screenshot}>capture</button>
+        <button onClick={::this._takePicture}>capture</button>
       </div>
     )
   }
 }
+
+const mapStateToProps = (state) => ({
+  booth: state.booth
+});
+
+export default connect(mapStateToProps)(Booth);

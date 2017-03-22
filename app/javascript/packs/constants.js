@@ -1,5 +1,5 @@
 const Constants = {
-  SAMPLE: "SAMPLE"
+  TAKE_PICTURE: "TAKE_PICTURE"
 }
 
 export default Constants;

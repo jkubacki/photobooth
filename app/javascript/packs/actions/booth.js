@@ -1,9 +1,10 @@
 import Constants from "../constants"
 const Actions = {};
 
-Actions.toggle = (dispatch) => {
+Actions.takePicture = (dispatch, picture) => {
   dispatch({
-    type: Constants.SAMPLE_ACTION
+    type: Constants.TAKE_PICTURE,
+    picture: picture
   })
 }
 
