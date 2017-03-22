@@ -1,9 +1,9 @@
-import { createStore, applyMiddleware } from 'redux';
-import createLogger from 'redux-logger';
-import reducers from './reducers';
+import { createStore, applyMiddleware } from "redux";
+import createLogger from "redux-logger";
+import reducers from "./reducers";
 
 const loggerMiddleware = createLogger({
-  level: 'info',
+  level: "info",
   collapsed: true,
 });
 
