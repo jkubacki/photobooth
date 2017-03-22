@@ -13,6 +13,16 @@ class Booth extends React.Component {
     Actions.takePicture(this.props.dispatch, picture);
   }
 
+  _renderPictures() {
+    return this.props.booth.pictures.map((picture, i) => {
+      return (
+        <div key={i}>
+          <img src={picture} />
+        </div>
+      );
+    });
+  }
+
   render() {
     return (
       <div>
@@ -22,6 +32,7 @@ class Booth extends React.Component {
           audio={false}
           screenshotFormat="image/jpeg"
         />
+        {::this._renderPictures()}
         <button onClick={::this._takePicture}>capture</button>
       </div>
     )
