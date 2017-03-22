@@ -8,4 +8,16 @@ Actions.takePicture = (dispatch, picture) => {
   })
 }
 
+Actions.showTimer = (dispatch) => {
+  dispatch({
+    type: Constants.SHOW_TIMER
+  })
+}
+
+Actions.hideTimer = (dispatch) => {
+  dispatch({
+    type: Constants.HIDE_TIMER
+  })
+}
+
 export default Actions;
