@@ -2515,6 +2515,10 @@ react-redux@^5.0.3:
     lodash-es "^4.2.0"
     loose-envify "^1.1.0"
 
+react-webcam@^0.0.14:
+  version "0.0.14"
+  resolved "https://registry.yarnpkg.com/react-webcam/-/react-webcam-0.0.14.tgz#9bb964439be654d4a9d2d7722d7bf5a9cccca877"
+
 react@^15.4.2:
   version "15.4.2"
   resolved "https://registry.yarnpkg.com/react/-/react-15.4.2.tgz#41f7991b26185392ba9bae96c8889e7e018397ef"
